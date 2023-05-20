@@ -1,5 +1,5 @@
 import classes from './Menu.module.css';
-import { List } from '@mui/material';
+import { Grid, List } from '@mui/material';
 import MenuItem from './MenuItem';
 import HouseIcon from '@mui/icons-material/House';
 import PetsIcon from '@mui/icons-material/Pets';
@@ -8,10 +8,16 @@ import { redirect } from 'react-router-dom';
 
 function Menu(props: any) {
     return (
-        <List sx={{position:'fixed', width:'100%'}}>
-            <MenuItem text={'Home'} icon={<HouseIcon />} route={'/'} />
-            <MenuItem text={'Adopt'} icon={<PetsIcon />} route={'/adopt'} />
-            <MenuItem text={'About'} icon={<InfoIcon />} route={'/about'} />
+        <List sx={{position:'fixed', width:'100%', height:'100%'}}>
+            <Grid sx={{height:'100%'}} container display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
+                <Grid item justifySelf={'flex-start'}>
+                    <MenuItem text={'Home'} icon={<HouseIcon />} route={'/'} />
+                    <MenuItem text={'Adopt'} icon={<PetsIcon />} route={'/adopt'} />
+                </Grid>
+                <Grid justifySelf={'flex-end'}>
+                    <MenuItem text={'About'} icon={<InfoIcon />} route={'/about'} />
+                </Grid>
+            </Grid>
         </List>
     );
 }

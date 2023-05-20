@@ -3,6 +3,7 @@ import PetsIcon from '@mui/icons-material/Pets';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar } from '@mui/material';
 import classes from './Navigation.module.css';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Navigation(props: any) {
 
@@ -15,9 +16,13 @@ function Navigation(props: any) {
                     <IconButton>
                         <PetsIcon fontSize='large' sx={{color:'white'}} onClick={() => window.location.href="/adopt"}/>
                     </IconButton>
-                    {displayMenu ? <></> : <Typography onClick={() => window.location.href="/"} variant='h4' component='h3' sx={{cursor:'pointer', display:'flex', justifyContent:'center', alignItems:'center', color:'white', fontFamily:'Lobster, cursive', letterSpacing:'0.05em'}}>Pawdoption</Typography>}
+                    {displayMenu ? <></> : <Typography onClick={() => window.location.href="/"} variant='h4' component='h3' sx={{cursor:'pointer', display:'flex', justifyContent:'center', alignItems:'center', color:'white', fontFamily:'Lobster, cursive', letterSpacing:'0em'}}>PetAdoption</Typography>}
                     <IconButton>
-                        <MenuIcon fontSize='large' sx={{color:'white'}} onClick={toggleMenu} />
+                        {
+                            !displayMenu ?
+                            <MenuIcon fontSize='large' sx={{color:'white'}} onClick={toggleMenu} /> :
+                            <CloseIcon fontSize='large' sx={{color:'white'}} onClick={toggleMenu} />
+                        }
                     </IconButton>
                 </Box>
             </AppBar>

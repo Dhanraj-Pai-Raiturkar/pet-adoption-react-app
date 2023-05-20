@@ -10,14 +10,14 @@ function ProfileDetails(props: any) {
         <Box display={'flex'} flex-flexDirection={'row'} justifyContent={'space-between'} width={'100%'}>
             <Box display={'flex'} alignItems={'start'} flexDirection={'column'}>
                 <Stack display={'flex'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
-                    <Typography sx={{fontWeight:'600', fontFamily:'Shadows Into Light, cursive'}} variant='h5'><u>Breed:</u> {breed}</Typography>
+                    <Typography sx={{fontWeight:'600', fontFamily:'Shadows Into Light, cursive'}} variant='h6'><u>Breed:</u> {breed}</Typography>
                 </Stack>
                 <Stack display={'flex'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
-                    <Typography sx={{fontWeight:'600', fontFamily:'Shadows Into Light, cursive'}} variant='h5'><u>Gender:</u></Typography>
+                    <Typography sx={{fontWeight:'600', fontFamily:'Shadows Into Light, cursive'}} variant='h6'><u>Gender:</u></Typography>
                     {
                         gender==="male" ?
-                        <MaleIcon fontSize='large' sx={{ mx:1, color: theme => theme.palette.primary.light }}/> :
-                        <FemaleIcon fontSize='large' sx={{ mx:1, color: theme => theme.palette.primary.light }}/>
+                        <MaleIcon fontSize='medium' sx={{ mx:1, color: theme => theme.palette.primary.light }}/> :
+                        <FemaleIcon fontSize='medium' sx={{ mx:1, color: theme => theme.palette.primary.dark }}/>
                     }
                 </Stack>
             </Box>

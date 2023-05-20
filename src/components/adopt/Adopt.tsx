@@ -12,7 +12,10 @@ function Adopt(props: any) {
             <Grid>
                 <List>
                     <ListItem>
-                        <PetProfileCard />
+                        <PetProfileCard imageSrc='./images/pup1.jpg' details={{breed: 'Stray', gender:'male'}} />
+                    </ListItem>
+                    <ListItem>
+                        <PetProfileCard imageSrc='./images/pup2.webp' details={{breed: 'Stray', gender:'female'}} />
                     </ListItem>
                 </List>
             </Grid>

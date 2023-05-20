@@ -14,7 +14,7 @@ function MenuItem(props: any) {
             onClick={() => window.location.href = route}
         >
             <ListItemButton>
-            <ListItemIcon sx={{ color:'white' }} >
+            <ListItemIcon sx={{ color:'white', minWidth:'2rem' }} >
                 {icon}
             </ListItemIcon>
                 <ListItemText primary={text} />
